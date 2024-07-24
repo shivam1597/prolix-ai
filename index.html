@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prolix AI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Raleway', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        header {
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+        }
+        .main {
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .main h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .main p {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 40px;
+        }
+        .main img {
+            max-width: 100%;
+            height: auto;
+        }
+        footer {
+            background-color: #fff;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+    <script>
+        function loadContent(page) {
+            fetch(page)
+                .then(response => response.text())
+                .then(data => {
+                    document.querySelector('.main').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading content:', error));
+        }
+    </script>
+</head>
+<body>
+
+<header>
+    <div class="logo">Prolix AI</div>
+    <nav>
+        <a href="#" onclick="loadContent('home.html')">Home</a>
+        <a href="#" onclick="loadContent('terms.html')">Terms & Conditions</a>
+        <a href="#" onclick="loadContent('refund_policy.html')">Refund Policy</a>
+        <a href="#" onclick="loadContent('about.html')">About</a>
+        <a href="#" onclick="loadContent('privacy_policy.html')">Privacy Policy</a>
+        <a href="#" onclick="loadContent('contact.html')">Contact</a>
+    </nav>
+
+</header>
+
+<main class="main">
+    <h1>Pay For What You Use!</h1>
+    <p><h2>Text. Image. Chat.</h2><br> With <br><h2>Gemini. CHAT GPT.</h2></p>
+    <img src="image.jpeg" height="400" width="300" alt="Robot Image">
+    <h1>Coming SooN.</h1>
+</main>
+
+<footer>
+    &copy; 2024 Prolix AI
+</footer>
+
+</body>
+</html>
